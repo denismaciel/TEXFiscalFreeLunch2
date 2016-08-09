@@ -1,0 +1,28 @@
+1. Einleitung
+  - Aim of the seminar: reimplement the paper
+  - Theme of our paper: fiscal policy: government spending multiplier
+  - NK framework
+  - Overview of the paper
+2. Main message of the paper
+  - Fiscal spending in a liquidity trap is very efficient
+  - Multiplier is high but decreases quickly...
+3. Explain the model
+  - Derive equations:
+    - First order conditions
+    - r_pot
+4. Impulse Responses
+  - Parameter values
+  - Interpretation of shock
+  - Liquidity trap: how the negative taste shock enters the model and what consequences it has.
+  - Explain figure 1 and 2
+5. The Multiplier
+  - Interpretation
+  - Average vs. marginal multiplier
+    - Outside the liquidity trap multiplier is constant
+6. Fiscal free lunch
+7. Workflow
+  - Github
+  - Syntax highlighting
+  - Advantages of working with data frame: better  
+
+     

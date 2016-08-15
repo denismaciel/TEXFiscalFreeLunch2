@@ -169,21 +169,32 @@ Finally, we have to derive the aggregate resource constraint
 \begin{equation}
 C_t + G_t \leq \left(\frac{P_t^*}{P_t}\right)^{\frac{\left(1+\theta_p\right)}{\theta_p}} K^\alpha N_t^{1-\alpha},
 \end{equation}
-where actual output $Y_t$ can be divided into private consumption and government spending $\left(Y_t \equiv C_t + G_t \right)$.
+where actual output $Y_t$ can be divided into private consumption and government spending $\left(Y_t \equiv C_t + G_t \right)$.\newline
+By log-linearizing the equations (1) to (7) around the Steady State and some rearranging, we receive the key equations of the model used in the \citet{Erceg.2014} paper.
 
 \subsection*{The Government}
 
+The government budget constraint is given by
 \begin{equation}
-B_{G,t} = \left(1 + i_{t-1}\right) + P_tG_t - \tau_{C,t}P_tC_t - \tau_{N,t}W_tN_t - T_t - MB_{t+1} + MB_t
+B_{G,t} = \left(1 + i_{t-1}\right)B_{G,t-1} + P_tG_t - \tau_{C,t}P_tC_t - \tau_{N,t}W_tN_t - T_t - MB_{t+1} + MB_t,  \nonumber
 \end{equation}
+where after scaling with $1/ P_tY_t$, the left side of the equation defines the end-of-period real government debt. In the model the government can issue bonds to finance the budget. As mentioned before, we set the consumption tax in our simplified model equal to zero. The government taxes the labor income with a constant rate $\tau_N$ according to the parameter values \[\tau_N = \frac{g_y}{s_N}\] with $g_y$ as the government share of steady-state output $\left(g_y = 0.2 \right)$ and the steady-state labor share $\left(s_N = 0.7\right)$.
+The government also collects a lump-sum tax $\left(\tau_t \equiv T_t/P_tY)\right)$, which varies in time and is adjusted according to the evolution of the debt stock $\left(\tau_t = \varphi_b b_{G,t-1}\right)$. Therefore, the fiscal policy specifies that taxes respond to government debt, but does not affect other macro variables in the model. We set the tax rule parameter $\varphi_b$ equal to 0.01. Consequently, the evolution of the tax base depends the first years after the shock mostly on the variation in labor tax revenues. The government budget is zero in steady-state in the simple benchmark model.\newline
+Monetary policy follows a Taylor rule which is subject to the zero lower bound.
+\begin{equation}
+i_t = max \left(-i, \gamma_{\pi} \pi_t + \gamma_x x_t\right)  \nonumber
+\end{equation}
+The monetary policy takes the zero lower bound constraint for the nominal interest rate into account. 
+By setting the parameters $\gamma_{\pi}$ and $\gamma_x$ arbitrarily large, we assume that the monetary policy would completely stabilizes inflation and the output gap in absence of the the zero lower bound.  
 
 
-Monetary policy follows a Taylor rule, and
-fiscal policy specifies that taxes respond to government debt.
+To see all the parameter values, we used in our benchmark calculation, see Table \ref{tab:Tabel1}.
+\bigskip
 
-By log-linearizing the equations (1) to (7) around the Steady State and some rearranging, we receive the key equations of the model used in the \citet{Erceg.2014} paper.
 
 \section{Impulse Response}
+
+
 
 The main steps to reimplicate the New Keynesian model the authors use are:
 \begin{enumerate}
@@ -220,6 +231,10 @@ figure2 no inflation and figure 2 5 quarter contracts
 Get Figure 1b
 
 \subsection*{Policy rules}
+
+At the ZLB, monetary policy cannot cut the nominal interest rate enough. With falling inflation the real interest rate rises, triggering an even stronger fall in the output gap. We see, thar the real interest rate plays the key role at the ZLB in the NK model.
+
+When the nominal interest rate hits its lower bound, the central bank does not have any further options in our model. The fiscal policy becomes crucial to stabilizes the economy and counteract the negative taste shock.
 
 change in monetary policy figure
 
@@ -380,6 +395,7 @@ $\gamma_x$ & Taylor Rule Coefficient on Output Gap & 66.15 \\
 \bottomrule
 \end{tabular}
 \egroup
+\label{tab:Tabel1}
 \end{table}
 
 

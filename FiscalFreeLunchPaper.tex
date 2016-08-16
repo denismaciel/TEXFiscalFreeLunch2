@@ -122,7 +122,7 @@ E_t \sum_{j=0}^\infty \beta^j \left\{ \frac{1}{1- \frac{1}{\sigma}} \left(C_{t+j
 \end{equation}
 under the constraint\newline
 $P_t(1+\tau_{C,t})C_t + B_{G,t} + MB_{t+1} = (1-\tau_{N,t})W_tN_t + (1+i_{t-1})B_{G,t-1} + MB-T_t + \Gamma_t,$
-where 0 $< \beta > 1$ is the discount factor and $E_t$ the rational expectations operator. The utility function depends on the households current consumption $C_t$ as deviation from a “reference level” $C\nu_{t+j}$, where C is steady state consumption, and a negative taste shock $\nu_t$ which reduces this reference level. The taste shock, we focus on in the next sections of the paper, therefore enters the model in the households utility function and affect the consumption decision of the household. The shock changes the marginal utility of consumption and so the willingness to consume the produced goods.\newline
+where 0 $< \beta > 1$ is the discount factor and $E_t$ the rational expectations operator. The utility function depends on the households current consumption $C_t$ as deviation from a “reference level” $C\nu_{t+j}$, where C is steady-state consumption, and a negative taste shock $\nu_t$ which reduces this reference level. The taste shock, we focus on in the next sections of the paper, therefore enters the model in the households utility function and affect the consumption decision of the household. The shock changes the marginal utility of consumption and so the willingness to consume the produced goods.\newline
 The utility function also depends inversely on hours worked $N_t$. The inclusion of money, as a zero nominal interest asset, provides a rationale for the zero lower bound on nominal interest rates. By assuming that $\mu_0$ is arbitrarily small, changes in real money balances have negligible implications for seignorage in the model. The households budget constraint implies that the expenditure on goods and net purchases of government bonds $B_{G,t}$ equals the after-tax labor income $ \left(1 - \tau_{N,t} \right) W_tN_t$, minus a lump-sum tax $T_t$, plus a proportional share of the profits $\Gamma_t$ of all intermediate firms. The households optimal plan needs to satisfy the first order condition, so that we receive
 \begin{align}
 \vspace{-0.5cm} \left(C_t - C\nu_t\right)^{-\frac{1}{\sigma}}  - \lambda_tP_t \left(1 + \tau_{C,t} \right) = 0,\nonumber\\
@@ -170,7 +170,7 @@ Finally, we have to derive the aggregate resource constraint
 C_t + G_t \leq \left(\frac{P_t^*}{P_t}\right)^{\frac{\left(1+\theta_p\right)}{\theta_p}} K^\alpha N_t^{1-\alpha},
 \end{equation}
 where actual output $Y_t$ can be divided into private consumption and government spending $\left(Y_t \equiv C_t + G_t \right)$.\newline
-By log-linearizing the equations (1) to (7) around the Steady State and some rearranging, we receive the key equations of the model used in the \citet{Erceg.2014} paper.
+By log-linearizing the equations (1) to (7) around the steady-state and some rearranging, we receive the key equations of the model used in the \citet{Erceg.2014} paper.
 
 \subsection*{The Government}
 
@@ -184,20 +184,20 @@ Monetary policy follows a Taylor rule which is subject to the zero lower bound.
 \begin{equation}
 i_t = max \left(-i, \gamma_{\pi} \pi_t + \gamma_x x_t\right)  \nonumber
 \end{equation}
-By setting the parameters $\gamma_{\pi}$ and $\gamma_x$ arbitrarily large, we assume that the monetary policy would completely stabilizes inflation and the output gap in absence of the the zero lower bound. \newline 
+By setting the parameters $\gamma_{\pi}$ and $\gamma_x$ arbitrarily large, we assume that the monetary policy would completely stabilizes inflation and the output gap in absence of the the zero lower bound. OPTIMAL MONETARY POLICY?  In the next section, we also consider the case when the parameters of the monetary policy rules are lower.\newline 
 Table \ref{tab:Tabel1} provides an overview over the parameter values, we use in our benchmark calculation.
 \bigskip
 
 
 \section{Impulse Response}
 
-First, we focus on the impulse response of an large negative taste shock and a government spending shock as response.
+First, we focus on the impulse response of an large negative taste shock and a positive government spending shock as response.
 The main steps to reimplicate the New Keynesian model and the results of the \citet{Erceg.2014} paper are the following:
 \begin{enumerate}
 \item Write up the model equations in Dynare and set the parameter values provided in the paper\vspace{-0.3cm}
 \item Solve the model without baseline shock, so that the nominal interest rate does not hit the zero lower bound and compute then impulse to government spending and consumption taste shock\vspace{-0.3cm}
-\item Impose the ZLB on monetary policy and simulate simul effects of a large negative consumption demand shock so that the economy hits the zero lower bound\vspace{-0.3cm}
-\item Find the right parameter and shock values for an eight quarter liquidity trap in an environment of an positive government spending shock equal to one percent of stead state output\vspace{-0.3cm}
+\item Impose the ZLB on monetary policy and simulate effects of a large negative consumption demand shock, so that the economy hits the zero lower bound\vspace{-0.3cm}
+\item Find the right parameter and shock values for an eight quarter liquidity trap in an environment of an positive government spending shock equal to one percentage of steady-state output\vspace{-0.3cm}
 \item Calculate the difference between the impulse responses of both shocks and the taste shock only to receive the effects of the government spending shock
 \end{enumerate}
 The large taste shock leads to a fall of the potential real interest rate $r^{pot}$. The length of the liquidity trap is defined on how long $r^{pot}$ remains below $-i$.
@@ -212,19 +212,20 @@ In the following subsections we explain the cruxes to get the right results. We 
 
 
 \subsection*{The Shock Parameter}
-The model consists of two different types of shocks: the consumption taste shock and the government spending shock. The adverse consumption shock triggers the fall of the potential real interest rate. The nominal and real interest rate fall simultaneously to the zero lower bound. As a consequence, we have a negative output gap and a rise in government debt. For the following calculations and figures, it is important to find the exact values to get an eight quarter liquidity trap. In Figure \ref{IRnoinflation} to \ref{Figure1bscatter} we calculate with a negative taste shock of $29.2$. The taste shock is scaled in the model by the scale parameter $\nu_c$ and $\left(1- g_y\right)$, which can be seen as the private sectors share of the steady-state output. Therefore, the negative taste shock can be interpreted as
-$\left(1-0.2\right) * 0.01 * 29.2 = 0.2336$ or a $23,36\%$ fall in output of steady-state GDP.
-THE GOVERNMENT SPENDING SHOCK
-
-Calculate difference between both shocks and taste shock only to get the effects of the government shock only
-
-Figure \ref{Figure1b} shows an loop of the negative taste shock between $0$ and $50$ and the consequences for the potential real interest rate and the liquidity trap duration.
+The model consists of two different types of exogenous shocks: the consumption taste shock and the government spending shock. The adverse consumption shock triggers the fall of the potential real interest rate. For the following calculations and figures, it is important to find the exact values to get an eight quarter liquidity trap. The nominal and real interest rate fall simultaneously to the zero lower bound when the adverse consumption shock is large enough. In Figure \ref{IRnoinflation} to \ref{Figure1a} we calculate with a negative taste shock of $29.2$. The taste shock is scaled in the model by the scale parameter $\nu_c$ and $\left(1- g_y\right)$, which can be seen as the private sectors share of the steady-state output. Therefore, the negative taste shock can be interpreted as $0.01 * \left(1-0.2\right) * 29.2 = 0.2336$ or a $23,36\%$ fall in output of steady-state GDP. The interest rates stay at the lower bound for eight quarters and then adjusts continuously. The negative shock leads to a fall in output and rise in government debt.
+\par
+\bigskip 
+To counteract the negative effects on output and later inflation, the government increases the spending by one percentage point of total GDP. The interpretation of the government spending shock is similar to the taste shock.  The government shock is scaled by the government share on output $g_v$. We calculate in the model with a spending increase of $0.05$. This leads after scaling $0.2 * 0.05 = 0.01$ to the required government spending shock. 
+In Figure \ref{IRnoinflation} the solid green line shows the dynamic effects of both shocks, the blue dashed line the result of the negative taste shock without the spending rise and the red dash-dotted line the isolated effects of the government shock in the scenario of both shocks. It is important to mention that the red line is calculated by the difference between both shocks and the taste shock only to extract the effects of the government spending rise.
+\par
+\bigskip
+Figure \ref{Figure1b} shows the consequences for the potential real interest rate if we loop the negative taste shock between $0$ and $50$ and then calculate the duration of the liquidity trap. The step function implies that a sightly larger adverse shock does not change the liquidity trap duration. Only when the potential real interest rate falls beyond a certain threshold, the adverse taste shock extends the liquidity trap duration. Figure \ref{Figure1bscatter} shows the scatter plot of the adverse taste shock. We loop the taste shock between the starting point $0$ and the end point $50$ with the increment of the sequence of $0.1$ and show the 501 shocks which enter the model and create the step function.
 \begin{figure}[p]
 \includegraphics[width=\textwidth]{Paperpics/Figure1b}
 \caption{Potential Real Interest Rate and Variation of Taste Shock}
 \label{Figure1b}
 \end{figure}
-The step function implies that a sightly larger adverse shock does not change the liquidity trap duration. Only when the potential real interest rate falls beyond a certain threshold, the adverse taste shock extends the liquidity trap duration. Figure \ref{Figure1bscatter} shows the scatter plot of the adverse taste shock. We loop the taste shock between the starting point $0$ and the end point $50$ with the increment of the sequence of $0.1$ and show the 501 shocks which enter the model and create the step function.
+
 \begin{figure}[p]
 \includegraphics[width=\textwidth]{Paperpics/Figure1bscatter}
 \caption{Potential Real Interest Rate and Variation of Taste Shock (Scatter plot)}
@@ -370,7 +371,7 @@ $\alpha$ & Capital Share   & 0.3 \\
 $\beta$  & Discount Factor & 0.995 \\
 $\sigma$ & Intertemporal Substitution Elasticity & 1 \\
 $\chi$ & Inverse of Frisch-Elasticity & 2.5 \\
-$g_c$ & Government Share on Output & 0.2 \\
+$g_y$ & Government Share on Output & 0.2 \\
 $\varphi_b$ & Tax Rule Parameter & 0.01 \\
 $\nu_c$ & Scale Parameter on the Taste Shock & 0.01 \\
 $\rho$ & AR(1) Natural Rate for both Shocks & 0.1 \\

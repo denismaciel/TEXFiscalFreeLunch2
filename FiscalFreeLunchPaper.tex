@@ -87,15 +87,15 @@
 The financial crisis in 2008 and the following worldwide recession marked a turning point in the economic and public debate about optimal fiscal and monetary policy. In the aftermath of the great recession, economists discussed about the effects of an expansionary fiscal policy to stabilize the economy and stimulate the private sector. The focus of the analysis has been on the size of the fiscal multiplier and the rise of the output in response to a government spending hike.
 \par
 \bigskip
-The economic crisis challenged the state of the art of the economic research at this time. To prevent the economy not to fall in a prolonged recession, governments and central banks launched unconventional and in part uncharted measures. When central banks reduced the interest rates down to the zero lower bound, fiscal policy became more important to counteract the deflationary spiral and the large output gap of the recession. The increasing literature about fiscal policy and the government spending multiplier, as well as new developments in general equilibrium models, suggest the effectiveness of government spending, when the nominal interest rate hits the zero lower bound. Normally, the fiscal multiplier is not only larger in an environment of a liquidity trap, but also comes together with minimal budgetary costs.
+The economic crisis challenged the state of the art of the economic research at this time. To prevent the economy from falling in a prolonged recession, governments and central banks launched unconventional and in part uncharted measures. When central banks reduced the interest rates down to the zero lower bound, fiscal policy became more important to counteract the deflationary spiral and the large output gap of the recession. The increasing literature about fiscal policy and the government spending multiplier, as well as new developments in general equilibrium models, suggest the effectiveness of government spending, when the nominal interest rate hits the zero lower bound. Normally, the fiscal multiplier is not only larger in an environment of a liquidity trap, but also comes together with minimal budgetary costs.
 \par
 \bigskip
-Therefore, the authors Christopher Erceg and Jesper Lindé address in the paper \textit{"Is there a Fiscal Free Lunch in a liquidity trap?"} the question whether policymakers should limit the size of the government spending. As we see in this paper, the distinction between marginal and average size of the fiscal multiplier is crucial for policymakers to better understand the effects of the implemented policies. The paper also gives new insights on how fiscal spending and austerity measures impact the government budget in a liquidity trap. The authors contribute with their paper to the current discussion about the efficient use of fiscal policy when monetary policy reaches its limit. By reimplementing the paper in Matlab \& Dynare, we followed the aims of the seminar to develop economic intuition and quantitative
+Therefore, the authors Christopher Erceg and Jesper Lindé address in the paper \textit{"Is there a Fiscal Free Lunch in a liquidity trap?"} the question whether policymakers should limit the size of the government spending. As we see in this paper, the distinction between marginal and average size of the fiscal multiplier is crucial for policymakers to better understand the effects of the implemented policies. The paper also gives new insights into how fiscal spending and austerity measures impact the government budget in a liquidity trap. The authors contribute with their paper to the current discussion about the efficiency of fiscal policy when monetary policy reaches its limit. By reimplementing the paper in Matlab \& Dynare, we followed the aims of the seminar to develop economic intuition and quantitative
 methodological expertise, as well as the understanding of the current macroeconomic policy debates.
 \par
 \bigskip
 
-Our paper is organized as follows. In Section II, we discuss briefly the current literature about the government spending multiplier and give the main results of the analyzed paper. In Section III, we concentrate on the key equations of the paper, explain the structure of the model and exemplify the interpretation of the shock parameters. In Section IV, we present the results of the impulse responses to show how the model reacts to an exogenous consumption taste shock and government-spending shock. We also give some impressions on how the results vary if we change the parameters of the monetary rule and the slope of the Phillips curve. In Section V, we develop the concept of the marginal and average fiscal multiplier. We show that the variation of the fiscal multiplier depends highly on the size of the government response and the price contract duration. In Section VI, we analyze the impacts of the government spending on the budget. In Section VII we provide some additional information on our work-flow. We conclude our paper with the main takeaways and a short critique.
+Our paper is organized as follows. In Section II, we discuss briefly the current literature about the government spending multiplier and explain the main results of the analyzed paper. In Section III, we concentrate on the key equations of the paper, explain the structure of the model and interpret the shocks and its parameters. In Section IV, we present the results of the impulse responses to show how the model reacts to an exogenous consumption taste shock and government-spending shock. We also give some impressions on how the results vary if we change the parameters of the monetary rule and the slope of the Phillips curve. In Section V, we dive deeper into the concept of multiplier and explain the distinction between \textit{marginal} and \textit{average} multiplier. We show that the variation of the fiscal multiplier depends highly on the size of the government response and the average contract duration (the Calvo parameter). In Section VI, we analyze the impacts of the increase in government spending on the government budget and answer the question wether there is a fiscal free lunch in a liquidity trap. In Section VII we provide some additional information on our workflow, which shall be useful for future participants of this seminar. We conclude our paper with the main takeaways and a short critique.
 
 
 \section{Fiscal Policy and the Spending Multiplier }
@@ -113,7 +113,7 @@ The key question of the paper "Is there a fiscal free lunch in a liquidity trap"
   - results depend highly on the framework of the model - we show the level of price stickiness, monetary policy rule
 
 \section{The Model}
-In this section we describe and summarize the baseline illustration of the New Keynesian dynamic stochastic general equilibrium (DSGE) model \citet{Erceg.2014} use in their paper\footnote {Additional information and a more detailed derivation of the standard log-linearized version of the New Keynesian model can be found in the Online Appendix of the original paper.}. The New Keynesian DSGE model has a RBC-core, but allows two inefficiencies, so that shocks can cause deviations from the "natural level": monopolistic competition among firms and the Calvo model of firms' price setting. Therefore, the New Keynesian model addresses the deficits of the RBC-models and makes the more realistic assumptions that prices are not adjusted continuously and real world markets are not perfectly competitive. Consequently, monetary policy can affect the real interest rate, thus has real effects. The microfoundation allows a normative policy analysis. 
+In this section we describe and summarize the baseline illustration of the New Keynesian dynamic stochastic general equilibrium (DSGE) model \citet{Erceg.2014} use in their paper\footnote {Additional information and a more detailed derivation of the standard log-linearized version of the New Keynesian model can be found in the Online Appendix of the original paper.}. The New Keynesian DSGE model has a RBC-core, but allows two inefficiencies, so that shocks can cause deviations from the "natural level": monopolistic competition among firms and the Calvo model of firms' price setting. Therefore, the New Keynesian model addresses the deficits of the RBC-models and makes the more realistic assumptions that prices are not adjusted continuously and real world markets are not perfectly competitive. Consequently, monetary policy can affect the real interest rate, thus has real effects. The microfoundation allows a normative policy analysis.
 \subsection*{Households}
 
 The representative household decides the intertemporal consumption demand by maximizing
@@ -132,12 +132,12 @@ The utility function also depends inversely on hours worked $N_t$. The inclusion
 and finally the Euler equation
 \begin{equation}
 \frac {\left(C_t - C\nu_t\right)^{-\frac{1}{\sigma}}}{\left(1 + \tau_{C,t} \right)} = \beta E_t \frac{\left(1 + i_t \right)}{1 + \pi_{t+1}} \frac{\left(C_{t+1} - C\nu_{t+1}\right)^{-\frac{1}{\sigma}}}{\left(1+ \tau_{C,t+1}\right)},
-\end{equation} 
+\end{equation}
 and the aggregate labor supply relation
 \begin{equation}
 mrs_t \equiv \frac{N_t^\chi}{\left(C_t - C\nu_t\right)^{-\frac{1}{\sigma}}} = \frac{\left(1 - \tau_{N,t}\right)}{\left(1 + \tau_{C,t}\right)} \frac{W_t}{P_t}.
 \end{equation}
-The last equation shows that the marginal rate of substitution between consumption and labor must equal the real wage. 
+The last equation shows that the marginal rate of substitution between consumption and labor must equal the real wage.
 We have to mention that in our simple New Keynesian Model we set the sales tax $\tau_{C,t}$ equal to zero, to get the same results as in the paper.
 
 \subsection*{Firms}
@@ -153,7 +153,7 @@ The firm, which can reset its price in period t, chooses a price $\left(P_t^{opt
 \begin{equation}
 \max_{P_t^{opt}\left(f\right)} E_t \sum_{j=0}^\infty \xi_p^j \psi_{t,t+j} \left[ \left(1 + \pi \right)^j P_t^{opt}\left(f\right) - MC_{t+j} \right] Y_{t+j} \left(f\right),\nonumber
 \end{equation}
-where $\psi_{t,t+j}$ is the discount factor and $\xi$ the probability that the firm's price set in t will still be valid in period t+1. The demand function for the good $\left(f\right)$ which faces the firm is given by 
+where $\psi_{t,t+j}$ is the discount factor and $\xi$ the probability that the firm's price set in t will still be valid in period t+1. The demand function for the good $\left(f\right)$ which faces the firm is given by
 \begin{equation}
 Y_{t+j}\left(f\right) = \left[\frac{P_t \left(f\right)}{P_t} \right]^{\frac{-\left(1+\theta_p\right)}{\theta_p}} Y_t \nonumber,
 \end{equation}
@@ -184,7 +184,7 @@ Monetary policy follows a Taylor rule which is subject to the zero lower bound.
 \begin{equation}
 i_t = max \left(-i, \gamma_{\pi} \pi_t + \gamma_x x_t\right)  \nonumber
 \end{equation}
-By setting the parameters $\gamma_{\pi}$ and $\gamma_x$ arbitrarily large, we assume that the monetary policy would completely stabilizes inflation and the output gap in absence of the the zero lower bound. OPTIMAL MONETARY POLICY?  In the next section, we also consider the case when the parameters of the monetary policy rules are lower.\newline 
+By setting the parameters $\gamma_{\pi}$ and $\gamma_x$ arbitrarily large, we assume that the monetary policy would completely stabilizes inflation and the output gap in absence of the the zero lower bound. OPTIMAL MONETARY POLICY?  In the next section, we also consider the case when the parameters of the monetary policy rules are lower.\newline
 Table \ref{tab:Tabel1} provides an overview over the parameter values, we use in our benchmark calculation.
 \bigskip
 
@@ -214,8 +214,8 @@ In the following subsections we explain the cruxes to get the right results. We 
 \subsection*{The Shock Parameter}
 The model consists of two different types of exogenous shocks: the consumption taste shock and the government spending shock. The adverse consumption shock triggers the fall of the potential real interest rate. For the following calculations and figures, it is important to find the exact values to get an eight quarter liquidity trap. The nominal and real interest rate fall simultaneously to the zero lower bound when the adverse consumption shock is large enough. In Figure \ref{IRnoinflation} to \ref{Figure1a} we calculate with a negative taste shock of $29.2$. The taste shock is scaled in the model by the scale parameter $\nu_c$ and $\left(1- g_y\right)$, which can be seen as the private sectors share of the steady-state output. Therefore, the negative taste shock can be interpreted as $0.01 * \left(1-0.2\right) * 29.2 = 0.2336$ or a $23,36\%$ fall in output of steady-state GDP. The interest rates stay at the lower bound for eight quarters and then adjusts continuously. The negative shock leads to a fall in output and rise in government debt.
 \par
-\bigskip 
-To counteract the negative effects on output and later inflation, the government increases the spending by one percentage point of total GDP. The interpretation of the government spending shock is similar to the taste shock.  The government shock is scaled by the government share on output $g_v$. We calculate in the model with a spending increase of $0.05$. This leads after scaling $0.2 * 0.05 = 0.01$ to the required government spending shock. 
+\bigskip
+To counteract the negative effects on output and later inflation, the government increases the spending by one percentage point of total GDP. The interpretation of the government spending shock is similar to the taste shock.  The government shock is scaled by the government share on output $g_v$. We calculate in the model with a spending increase of $0.05$. This leads after scaling $0.2 * 0.05 = 0.01$ to the required government spending shock.
 In Figure \ref{IRnoinflation} the solid green line shows the dynamic effects of both shocks, the blue dashed line the result of the negative taste shock without the spending rise and the red dash-dotted line the isolated effects of the government shock in the scenario of both shocks. It is important to mention that the red line is calculated by the difference between both shocks and the taste shock only to extract the effects of the government spending rise.
 \par
 \bigskip
@@ -237,8 +237,8 @@ Figure \ref{Figure1b} shows the consequences for the potential real interest rat
 
 
 \subsection*{The Calvo Price Setting}
-The slope of the Phillips curve is one important factor which influences the results of the impulse. In Figure 2, we begin in an environment of zero inflation by setting the Calvo parameter equal to one. 
-As the inflation is kept to zero, the real interest rate falls to $-4\%$ equal to the nominal interest rate $\left(r_t = i_t\right)$. 
+The slope of the Phillips curve is one important factor which influences the results of the impulse. In Figure 2, we begin in an environment of zero inflation by setting the Calvo parameter equal to one.
+As the inflation is kept to zero, the real interest rate falls to $-4\%$ equal to the nominal interest rate $\left(r_t = i_t\right)$.
 play around with calvo price setting
 \begin{figure}[p]
 \includegraphics[width=\textwidth]{Paperpics/Figure25quarter}

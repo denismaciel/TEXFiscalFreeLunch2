@@ -105,7 +105,7 @@ new evidence on recent model-based economic research raised the question whether
 
 The impacts of higher spending or fiscal consolation measures in an environment of a liquidity trap when the nominal interest rate hits zero,
 
-Fiscal policy can play a crucial role in stabilizing the economy during an economic crisis. Recent literature shows that the government spending multiplier is particularly large in recessions. Improvements in the economic research and new developments in New Keynesian Model literature after the financial crisis 2008 can help the political decision makers to better understand optimal policies in times of an great economic downturn. Eggertsson (2008), David and Leeper (2011) and Christiano, Eichenbaum and Rebelo (2011) show that an increase in government spending can outsize the effect on output in a deep recession. Especially in prolonged liquidity traps, there can be a strong case for a fiscal stimulus on a temporary basis to jump start the economy and push it out of an economic downward spiral.
+Fiscal policy can play a crucial role in stabilizing the economy during an economic crisis. Recent literature shows that the government spending multiplier is particularly large in recessions. Improvements in the economic research and new developments in New Keynesian Model literature after the financial crisis 2008 can help the political decision makers to better understand optimal policies in times of an great economic downturn. Eggertsson (2008), David and Leeper (2011) and \citet{Christiano.2011} show that an increase in government spending can outsize the effect on output in a deep recession. Especially in prolonged liquidity traps, there can be a strong case for a fiscal stimulus on a temporary basis to jump start the economy and push it out of an economic downward spiral.
 The key question of the paper "Is there a fiscal free lunch in a liquidity trap" concentrates on the magnitude of the government spending multiplier under different frameworks and the impact of the fiscal policy on the government budget.
 
   - Fiscal spending in a liquidity trap is very efficient
@@ -178,26 +178,25 @@ The government budget constraint is given by
 \begin{equation}
 B_{G,t} = \left(1 + i_{t-1}\right)B_{G,t-1} + P_tG_t - \tau_{C,t}P_tC_t - \tau_{N,t}W_tN_t - T_t - MB_{t+1} + MB_t,  \nonumber
 \end{equation}
-where after scaling with $1/ P_tY_t$, the left side of the equation defines the end-of-period real government debt. In the model the government can issue bonds to finance the budget. As mentioned before, we set the consumption tax $\tau_{C,t}$ in our simplified model equal to zero for all t. The government taxes the labor income with a constant rate $\tau_N$ according to the parameter values \[\tau_N = \frac{g_y}{s_N}\] with $g_y$ as the government share of steady-state output $\left(g_y = 0.2 \right)$ and the steady-state labor share $\left(s_N = 0.7\right)$.
+where after scaling with $1/ P_tY_t$, the left side of the equation defines the end-of-period real government debt. In the model the government can issue bonds to finance the budget. As mentioned before, we set the consumption tax $\tau_{C,t}$ in our simplified model equal to zero for all t. The government charges the labor income with a constant tax rate $\tau_N$ according to the equation \[\tau_N = \frac{g_y}{s_N}\] with $g_y$ as the government share of steady-state output $\left(g_y = 0.2 \right)$ and the steady-state labor share $\left(s_N = 0.7\right)$.
 The government also collects a lump-sum tax $\left(\tau_t \equiv T_t/P_tY)\right)$, which varies in time and is adjusted according to the evolution of the debt stock $\left(\tau_t = \varphi_b b_{G,t-1}\right)$. Therefore, the fiscal policy specifies that taxes respond to government debt, but does not affect other macro variables in the model. We set the tax rule parameter $\varphi_b$ equal to 0.01. Consequently, the evolution of the tax base depends mostly on the variation in labor tax revenues the first years after a negative taste shock. The government budget is zero in steady-state in the simple benchmark model.\newline
 Monetary policy follows a Taylor rule which is subject to the zero lower bound.
 \begin{equation}
 i_t = max \left(-i, \gamma_{\pi} \pi_t + \gamma_x x_t\right)  \nonumber
 \end{equation}
-By setting the parameters $\gamma_{\pi}$ and $\gamma_x$ arbitrarily large, we assume that the monetary policy would completely stabilizes inflation and the output gap in absence of the the zero lower bound. OPTIMAL MONETARY POLICY?  In the next section, we also consider the case when the parameters of the monetary policy rules are lower.\newline
+By setting the parameters $\gamma_{\pi}$ and $\gamma_x$ arbitrarily large, we assume that the monetary policy would completely stabilizes inflation and the output gap in absence of the the zero lower bound. In the next section, we also consider the alternative case where the parameters of the monetary policy rules are lower.\newline
 Table \ref{tab:Tabel1} provides an overview over the parameter values, we use in our benchmark calculation.
 \bigskip
 
 
 \section{Impulse Response}
 
-First, we focus on the impulse response of an large negative taste shock and a positive government spending shock as response.
-The main steps to reimplicate the New Keynesian model and the results of the \citet{Erceg.2014} paper are the following:
+First, we focus on the impulse response of a large negative taste shock and a positive government spending shock in response to the fall in output. The main steps to reimplicate the New Keynesian model and the results of the \citet{Erceg.2014} paper are the following:
 \begin{enumerate}
 \item Write up the model equations in Dynare and set the parameter values provided in the paper\vspace{-0.3cm}
 \item Solve the model without baseline shock, so that the nominal interest rate does not hit the zero lower bound and compute then impulse to government spending and consumption taste shock\vspace{-0.3cm}
 \item Impose the ZLB on monetary policy and simulate effects of a large negative consumption demand shock, so that the economy hits the zero lower bound\vspace{-0.3cm}
-\item Find the right parameter and shock values for an eight quarter liquidity trap in an environment of an positive government spending shock equal to one percentage of steady-state output\vspace{-0.3cm}
+\item Find the right parameter and shock values for an eight quarter liquidity trap in an environment of an positive government spending shock equal to one percentage point of steady-state output\vspace{-0.3cm}
 \item Calculate the difference between the impulse responses of both shocks and the taste shock only to receive the effects of the government spending shock
 \end{enumerate}
 The large taste shock leads to a fall of the potential real interest rate $r^{pot}$. The length of the liquidity trap is defined on how long $r^{pot}$ remains below $-i$.
@@ -212,14 +211,14 @@ In the following subsections we explain the cruxes to get the right results. We 
 
 
 \subsection*{The Shock Parameter}
-The model consists of two different types of exogenous shocks: the consumption taste shock and the government spending shock. The adverse consumption shock triggers the fall of the potential real interest rate. For the following calculations and figures, it is important to find the exact values to get an eight quarter liquidity trap. The nominal and real interest rate fall simultaneously to the zero lower bound when the adverse consumption shock is large enough. In Figure \ref{IRnoinflation} to \ref{Figure1a} we calculate with a negative taste shock of $29.2$. The taste shock is scaled in the model by the scale parameter $\nu_c$ and $\left(1- g_y\right)$, which can be seen as the private sectors share of the steady-state output. Therefore, the negative taste shock can be interpreted as $0.01 * \left(1-0.2\right) * 29.2 = 0.2336$ or a $23,36\%$ fall in output of steady-state GDP. The interest rates stay at the lower bound for eight quarters and then adjusts continuously. The negative shock leads to a fall in output and rise in government debt.
+The model consists of two different types of exogenous shocks: the consumption taste shock and the government spending shock. The adverse consumption shock triggers the fall of the potential real interest rate. We begin the analysis by setting the Calvo parameter equal to one and thus eliminating changes to inflation, to emphasize in the next steps the role of inflation in our model and on the government spending multiplier. For the following calculations and figures, it is important to find the exact values to get an eight quarter liquidity trap. The nominal and real interest rate fall simultaneously to the zero lower bound when the adverse consumption shock is large enough. The negative shock also leads to a fall in output and rise in government debt. In Figure \ref{IRnoinflation} to \ref{Figure1a} we calculate with a negative taste shock of $29.2$. The taste shock is scaled in the model by the scale parameter $\nu_c$ and $\left(1- g_y\right)$, which can be seen as the private sectors share of the steady-state output. Therefore, the negative taste shock can be interpreted as $0.01 * \left(1-0.2\right) * 29.2 = 0.2336$ or a $23,36\%$ fall in output of steady-state GDP. The interest rates stay at the lower bound for eight quarters and then adjusts continuously.
 \par
 \bigskip
-To counteract the negative effects on output and later inflation, the government increases the spending by one percentage point of total GDP. The interpretation of the government spending shock is similar to the taste shock.  The government shock is scaled by the government share on output $g_v$. We calculate in the model with a spending increase of $0.05$. This leads after scaling $0.2 * 0.05 = 0.01$ to the required government spending shock.
-In Figure \ref{IRnoinflation} the solid green line shows the dynamic effects of both shocks, the blue dashed line the result of the negative taste shock without the spending rise and the red dash-dotted line the isolated effects of the government shock in the scenario of both shocks. It is important to mention that the red line is calculated by the difference between both shocks and the taste shock only to extract the effects of the government spending rise.
+To counteract the negative effects on output, the government increases the spending by one percentage point of total GDP. The interpretation of the government spending shock is similar to the taste shock.  The government shock is scaled by the government share on total output $g_v$. We calculate in the model with a spending increase of $0.05$. This leads after scaling $0.2 * 0.05 = 0.01$ to the required government spending shock.
+In Figure \ref{IRnoinflation} the solid green line shows the dynamic effects of both shocks, the blue dashed line the result of the negative taste shock without the rinse in spending and the red dash-dotted line the isolated effects of the government shock in the scenario of both shocks. It is important to mention that the red line is calculated by the difference between both shocks and the taste shock only to extract the effects of the government spending rise.
 \par
 \bigskip
-Figure \ref{Figure1b} shows the consequences for the potential real interest rate if we loop the negative taste shock between $0$ and $50$ and then calculate the duration of the liquidity trap. The step function implies that a sightly larger adverse shock does not change the liquidity trap duration. Only when the potential real interest rate falls beyond a certain threshold, the adverse taste shock extends the liquidity trap duration. Figure \ref{Figure1bscatter} shows the scatter plot of the adverse taste shock. We loop the taste shock between the starting point $0$ and the end point $50$ with the increment of the sequence of $0.1$ and show the 501 shocks which enter the model and create the step function.
+Figure \ref{Figure1b} shows the consequences for the potential real interest rate when we loop the negative taste shock between $0$ and $50$ and then calculate the duration of the liquidity trap. The step function implies that a sightly larger adverse shock does not change the liquidity trap duration. Only when the potential real interest rate falls beyond a certain threshold, the adverse taste shock extends the liquidity trap duration. Figure \ref{Figure1bscatter} shows the scatter plot of the adverse taste shock. We loop the taste shock between the starting point $0$ and the end point $50$ with the increment of the sequence of $0.1$ and show the 501 shocks which enter the model to create the step function.
 \begin{figure}[p]
 \includegraphics[width=\textwidth]{Paperpics/Figure1b}
 \caption{Potential Real Interest Rate and Variation of Taste Shock}
@@ -237,23 +236,27 @@ Figure \ref{Figure1b} shows the consequences for the potential real interest rat
 
 
 \subsection*{The Calvo Price Setting}
-The slope of the Phillips curve is one important factor which influences the results of the impulse. In Figure 2, we begin in an environment of zero inflation by setting the Calvo parameter equal to one.
-As the inflation is kept to zero, the real interest rate falls to $-4\%$ equal to the nominal interest rate $\left(r_t = i_t\right)$.
-play around with calvo price setting
+The slope of the Phillips curve is one important factor in the analysis of the government spending multiplier and the impact of fiscal spending on the government debt. In Figure \ref{IRnoinflation}, we begin in an environment of zero inflation.
+As the inflation is kept to zero, the annualized real interest rate falls to $-4\%$ and follows the path of the nominal interest rate $\left(r_t = i_t\right)$. We change the Calvo parameter to 0.8 to get a 5 quarter price contract duration in the model and thereby allow inflation to move. When the economy now hits the zero lower bound and inflation is responsive, the fall in output is very large. The exogenous shock leads to a fall in marginal costs and a decline in prices which changes the inflation expectations of the agents. Real interest rates have then to rise when the nominal interest rate is stuck at the zero lower bound. Consequently, households change their consumption behavior by increasing their savings which reduces the output even further. Figure \ref{IR5quarter} supports strongly economic theory and this results.
+
 \begin{figure}[p]
 \includegraphics[width=\textwidth]{Paperpics/Figure25quarter}
 \caption{Immediate Rise in Government Spending (5 Quarter Price Contracts)}
 \label{IR5quarter}
 \end{figure}
 
-figure2 no inflation and figure 2 5 quarter contracts
-
-Get Figure 1b
 
 \subsection*{Policy rules}
-the role of real interest rate in NKM
 
 At the ZLB, monetary policy cannot cut the nominal interest rate enough. With falling inflation the real interest rate rises, triggering an even stronger fall in the output gap. We see, thar the real interest rate plays the key role at the ZLB in the NK model.
+
+
+
+When the nominal interest rate hits its lower bound, the central bank does not have any further options in our model. The fiscal policy becomes crucial to stabilizes the economy and counteract the negative taste shock.
+
+change in monetary policy figure
+
+Figure 1 a effects of fiscal policy on liquidity trap
 
 \begin{figure}[p]
 \includegraphics[width=\textwidth]{Paperpics/Figure25quarternewtaylorrule}
@@ -262,47 +265,28 @@ At the ZLB, monetary policy cannot cut the nominal interest rate enough. With fa
 \end{figure}
 \bigskip
 
-When the nominal interest rate hits its lower bound, the central bank does not have any further options in our model. The fiscal policy becomes crucial to stabilizes the economy and counteract the negative taste shock.
-
-change in monetary policy figure
-
-Figure 1 a effects of fiscal policy on liquidity trap
-
-Table 2 - diference values for taste shock (important to control values! :D)
-
 \begin{figure}[p]
 \includegraphics[width=\textwidth]{Paperpics/Figure1a}
 \caption{Potential Real Interest Rate and Fiscal Response}
 \label{Figure1a}
 \end{figure}
 
-Why is the fall in output so large when the economy hits the zero
-bound? For a given fall in output, marginal cost falls and prices decline.
-With staggered pricing, the drop in prices leads agents to expect future deflation. With the nominal interest rate stuck at zero, the real interest
-rate rises. This perverse rise in the real interest rate leads to an increase
-in desired saving, which partially undoes the effect of a given fall in
-output. So, the total fall in output required to reduce desired saving to
-zero is very large. (Christiano 2011)
+
 
 \input{Multiplier}
-
-\section{Impacts on the Government Debt}
-
-\citet{Afonso.2010}
-Critique government debt in financial crisis S.27/28
-
 \input{Workflow}
 
-%Screenshot Github
-
+%Include footnote with link to our github project
+%maybe include screenshot of github
 
 
 \section{Conclusion}
 
-%Test
+\citet{Afonso.2010}
+Critique government debt in financial crisis S.27/28
 
 \citet{Erceg.2014}
-\citet{Christiano.2011}\citet{CoenenG..2010}\citet{Erceg.2014}
+\citet{CoenenG..2010}\citet{Erceg.2014}
 
 \citet{Eggertsson.2011}
 \citet{Coenen.2010}

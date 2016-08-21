@@ -16,23 +16,27 @@ where capital letters stands for variables in levels and lowercase letters for v
 
 \subsection*{The Multiplier in the Model}
 
-In the model, the multiplier has a stairway format. The multiplier is constant as long as the duration of the liquidity trap remains unchanged. This means that each extra euro spent by the government will have the same effect on output if the liquidity trap duration is not affected. Once the increase in government spending is big enough to shorten the duration of the liquidity trap by one period, the multiplier declines. Government spending becomes then less effective in boosting the economy. In Figure \ref{fig:averagemultiplier}, which depicts a model with no inflation, the multiplier is  0.584 in case government does nothing in the face of the negative taste shock. If policy makers decide to step in and increase spending, the multiplier remains constant at 0.584 until the increase in spending surpasses the threshold of 1.46\% of GDP. At this point, the liquidity trap becomes one period shorter, which makes the multiplier decrease to 0.548. This mechanism works in this fashion (big enough government spending hike leads to shorter liquidity trap and smaller multiplier) until the size of the increase in government spending is so big that the economy gets out of the liquidity trap. After that, the multiplier is constant in the model irrespective of the size of the government in the economy.
+In the model, the multiplier has a stairway format. The multiplier is constant as long as the duration of the liquidity trap remains unchanged. This means that each extra euro spent by the government will have the same effect on output if the liquidity trap duration is not affected. Once the increase in government spending is big enough to shorten the duration of the liquidity trap by one period, the multiplier declines. Government spending becomes then less effective in boosting the economy. 
 
 \begin{figure}[th]
-\includegraphics[width=\textwidth]{Paperpics/Figure3gsmnoinflation}
+\centering
+\includegraphics[width=0.8\textwidth]{Paperpics/Figure3gsmnoinflation}
 \caption{Average and Marginal Spending Multiplier with No Inflation}
 \label{fig:averagemultiplier}
 \end{figure}
 
+In Figure \ref{fig:averagemultiplier}, which depicts a model with no inflation, the multiplier is  0.584 in case government does nothing in the face of the negative taste shock. If policy makers decide to step in and increase spending, the multiplier remains constant at 0.584 until the increase in spending surpasses the threshold of 1.46\% of GDP. At this point, the liquidity trap becomes one period shorter, which makes the multiplier decrease to 0.548. This mechanism works in this fashion (big enough government spending hike leads to shorter liquidity trap and smaller multiplier) until the size of the increase in government spending is so big that the economy gets out of the liquidity trap. After that, the multiplier is constant in the model irrespective of the size of the government in the economy.
 The case we have been considering, in which prices do not vary at all, displays a relatively low multiplier. In fact, it is smaller than unity. Once we allow for the more realistic scenario with sticky but not completely fixed prices, the multiplier increases by a considerable amount. Figure \ref{fig:mulalt} shows the multiplier schedule for three different average price durations. The more flexible the prices, the higher the multiplier for a given level of government spending. With four-quarter contracts (Calvo parameter set to 0.75), the multiplier reaches a far greater value of 3.828. This means that each euro spent by the government will increase GDP by 3.828 euros (as long, of course, as spending hike is not too big to shorten the liquidity trap).
 
-A large multiplier makes a strong case for government intervention. Figure \ref{fig:mulalt} tells, however, also another story and a word of caution is necessary here. Although we have a higher multiplier the more flexible the prices are, the drop in the multiplier caused by the shortening of the liquidity trap is also stronger in this case. The multiplier falls sharply with the level of government spending when prices are not very sticky. This observation leads to the important distinction between average and marginal multiplier, which is central for the paper we are analyzing.
-
-\begin{figure}[th]
-\includegraphics[width=\textwidth]{Paperpics/Figure3gsmalternativeprice.eps}
+\begin{figure}[!th]
+\centering
+\includegraphics[width=0.8\textwidth]{Paperpics/Figure3gsmalternativeprice.eps}
 \caption{Spending Multiplier under Alternative Contract Duration}
 \label{fig:mulalt}
 \end{figure}
+
+A large multiplier makes a strong case for government intervention. Figure \ref{fig:mulalt} tells, however, also another story and a word of caution is necessary here. Although we have a higher multiplier the more flexible the prices are, the drop in the multiplier caused by the shortening of the liquidity trap is also stronger in this case. The multiplier falls sharply with the level of government spending when prices are not very sticky. This observation leads to the important distinction between average and marginal multiplier, which is central for the paper we are analyzing.
+
 
 \subsection*{Marginal vs. Average Multiplier}
 
@@ -65,16 +69,18 @@ For the average multiplier we proceeded similarly. We found the government shock
 
 We have seen that in the case where prices are more flexible, the multiplier can become very large with each extra euro spent by government boosting GDP by almost 4\%. Given that the multiplier is so high, would it be the case of a fiscal free lunch? A fiscal free lunch would occur if the extra economic activity generated by the fiscal stimulus is so high that the taxes collected over it would be greater than the stimulus itself. Contrary to common-sense, an increase in spending would in fact reduce overall public debt compared to the case in which government does not intervene.
 
-  This question is best answered by analyzing Figure~\ref{fig:debt}. It depicts the marginal effect that government spending has on government debt. The striking conclusion of the model is that for four-quarter contracts, a spending hike of one percent of GDP causes the debt to fall by roughly 0.7 percentage points. In this very scenario, even increases in spending in amounts greater than 7\% of GDP would not only be self-financing but it would in fact decrease government debt. The fiscal free lunch is also observed for five-quarter contracts although not as pronounced as in the previous case. For more sticky prices (average contract duration of ten quarters), there is no fall in debt but still in this case the government stimulus comes at moderate budgetary costs. The rate at which debt increases with government spending is not so high.
-
-\begin{figure}[th]
-\includegraphics[width=\textwidth]{Paperpics/Figure3govdebtnoinflation.eps}
+\begin{figure}[!th]
+\centering
+\includegraphics[width=0.8\textwidth]{Paperpics/Figure3govdebtnoinflation.eps}
 \caption{Government Debt Response with No Inflation}
 \label{fig:debtnoinflation}
 \end{figure}
 
-\begin{figure}[th]
-\includegraphics[width=\textwidth]{Paperpics/Figure3govdebtalternativeprices.eps}
+This question is best answered by analyzing Figure~\ref{fig:debt}. It depicts the marginal effect that government spending has on government debt. The striking conclusion of the model is that for four-quarter contracts, a spending hike of one percent of GDP causes the debt to fall by roughly 0.7 percentage points. In this very scenario, even increases in spending in amounts greater than 7\% of GDP would not only be self-financing but it would in fact decrease government debt. The fiscal free lunch is also observed for five-quarter contracts although not as pronounced as in the previous case. For more sticky prices (average contract duration of ten quarters), there is no fall in debt but still in this case the government stimulus comes at moderate budgetary costs. The rate at which debt increases with government spending is not so high.
+
+\begin{figure}[!th]
+\centering
+\includegraphics[width=0.8\textwidth]{Paperpics/Figure3govdebtalternativeprices.eps}
 \caption{Government Debt Response under Alternative Contract Duration}
 \label{fig:debt}
 \end{figure}

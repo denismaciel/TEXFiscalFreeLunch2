@@ -58,7 +58,7 @@
 	\vspace{1cm}
 	{\scshape\large Seminar Paper in "Recent Research in Macroeconomics"\par}
 	\vspace{1.5cm}
-	{\LARGE\bfseries Reimplementation of Erceg \& Lindé (2012):\par}
+	{\LARGE\bfseries Replication of Erceg \& Lindé (2012):\par}
 	\vspace{0.5cm}
 	{\Large\bfseries Is there a Fiscal Free Lunch in a Liquidity Trap?\par}
 	\vspace{2cm}
@@ -84,18 +84,18 @@
 
 \section{Introduction}
 
-The financial crisis in 2008 and the following worldwide recession marked a turning point in the economic and public debate about optimal fiscal and monetary policy. In the aftermath of the great recession, economists discussed about the effects of an expansionary fiscal policy to stabilize the economy and stimulate the private sector. The focus of the analysis has been on the size of the fiscal multiplier and the rise of the output in response to a government spending hike.
+The financial crisis in 2008 and the following worldwide recession marked a turning point in the economic and public debate about optimal fiscal and monetary policy. In the aftermath of the great recession, economists discussed about the effects of an expansionary fiscal policy to stabilize the economy and stimulate the private sector. The focus of the analysis has been on the size of the fiscal multiplier and the rise of output in response to a government spending hike.
 \par
 \bigskip
 The economic crisis challenged the state of the art of the economic research at this time. To prevent the economy from falling in a prolonged recession, governments and central banks launched unconventional and in part uncharted measures. When central banks reduced the interest rates down to the zero lower bound, fiscal policy became more important to counteract the deflationary spiral and the large output gap of the recession. The increasing literature about fiscal policy and the government spending multiplier, as well as new developments in general equilibrium models, suggest the effectiveness of government spending, when the nominal interest rate hits the zero lower bound. Normally, the fiscal multiplier is not only larger in an environment of a liquidity trap, but also comes together with minimal budgetary costs.
 \par
 \bigskip
-Therefore, the authors Christopher Erceg and Jesper Lindé address in the paper \textit{"Is there a Fiscal Free Lunch in a liquidity trap?"} the question whether policymakers should limit the size of the government spending. As we see in this paper, the distinction between marginal and average size of the fiscal multiplier is crucial for policymakers to better understand the effects of the implemented policies. The paper also gives new insights into how fiscal spending and austerity measures impact the government budget in a liquidity trap. The authors contribute with their paper to the current discussion about the efficiency of fiscal policy when monetary policy reaches its limit. By reimplementing the paper in Matlab \& Dynare, we followed the aims of the seminar to develop economic intuition and quantitative
+Therefore, the authors Christopher Erceg and Jesper Lindé address in the paper \textit{"Is there a Fiscal Free Lunch in a liquidity trap?"} the question whether policymakers should limit the size of the government spending. As we see in this paper, the distinction between marginal and average size of the fiscal multiplier is crucial for policymakers to better understand the effects of the implemented policies. The paper also gives new insights into how fiscal spending and austerity measures impact the government budget in a liquidity trap. The authors contribute with their paper to the current discussion about the efficiency of fiscal policy when monetary policy reaches its limit. By replicating the paper in Matlab \& Dynare, we followed the aims of the seminar to develop economic intuition and quantitative
 methodological expertise, as well as the understanding of the current macroeconomic policy debates.
 \par
 \bigskip
 
-Our paper is organized as follows. In Section II, we discuss briefly the current literature about the government spending multiplier and explain the main results of the analyzed paper. In Section III, we concentrate on the key equations of the paper, explain the structure of the model and interpret the shocks and its parameters. In Section IV, we present the results of the impulse responses to show how the model reacts to an exogenous consumption taste shock and government-spending shock. We also give some impressions on how the results vary if we change the parameters of the monetary rule and the slope of the Phillips curve. In Section V, we dive deeper into the concept of multiplier and explain the distinction between \textit{marginal} and \textit{average} multiplier. We show that the variation of the fiscal multiplier depends highly on the size of the government response and the average contract duration (the Calvo parameter). In Section VI, we analyze the impacts of the increase in government spending on the government budget and answer the question whether there is a fiscal free lunch in a liquidity trap. In Section VII we provide some additional information on our workflow, which shall be useful for future participants of this seminar. We conclude our paper with the main takeaways and a short critique.
+Our paper is organized as follows. In Section II, we discuss briefly the current literature about the government spending multiplier and explain the main results of the analyzed paper. In Section III, we concentrate on the key equations of the paper, explain the structure of the model and explain the underlying microeconomics intuition of the simple New Keynesian model. In Section IV, we present the results of the impulse response to show how the model reacts to an exogenous consumption taste shock and government-spending shock. Furthermore, we interpret the shock parameters for better understanding of the dimension. We also give some impressions on how the results vary if we change the slope of the Phillips curve or the parameters of the monetary rule. In Section V, we dive deeper into the concept of multiplier and explain the distinction between \textit{marginal} and \textit{average} multiplier. We show that the variation of the fiscal multiplier depends highly on the size of the government response and the average contract duration (the Calvo parameter). In Section VI, we analyze the impacts of the increase in government spending on the government budget and answer the question wether there is a fiscal free lunch in a liquidity trap. In Section VII we provide some additional information on our workflow, which shall be useful for future participants of this seminar. We conclude our paper with the main takeaways and a short critique.
 
 
 \section{Fiscal Policy and the Spending Multiplier }
@@ -192,10 +192,7 @@ Table \ref{tab:Tabel1} provides an overview over the parameter values, we use in
 
 \section{Impulse Response}
 
-
-First, we focus on the impulse response of an large negative taste shock and a positive government spending shock as response.
-The main steps to replicate the New Keynesian model and the results of the \citet{Erceg.2014} paper are the following:
-
+First, we focus on the impulse response of a large negative taste shock and a positive government spending shock in response to the fall in output. The main steps to reimplicate the New Keynesian model and the results of the \citet{Erceg.2014} paper are the following:
 \begin{enumerate}
 \item Write up the model equations in Dynare and set the parameter values provided in the paper\vspace{-0.3cm}
 \item Solve the model without baseline shock, so that the nominal interest rate does not hit the zero lower bound and compute then impulse to government spending and consumption taste shock\vspace{-0.3cm}
@@ -257,8 +254,8 @@ At the zero lower bound monetary policy cannot cut the nominal interest rate far
 In the following, we shift the focus to the monetary and fiscal policy rules. After setting the parameters of the monetary rule in Figure \ref{IR5quarter} arbitrarily large, we change the monetary policy rule to values which are more \textit{usual} in standard New Keynesian models. We set the Taylor rule parameter on output $\gamma_x$ to 0.2 and inflation $\gamma_{\pi}$ to 1.5. As a result the negative taste shock leads to an explosion in the impulse response. The amplitude reaches to limits which can be seen as quite unrealistic and not useful for further economic analysis. The careful calibration of the Taylor rule parameter must be seen as essential in our model and part of of an optimal monetary policy analysis.
 \par
 \bigskip
-We turn the focus now on the fiscal response to the negative taste shock. Figure \ref{Figure1a} shows how the rise in government spending helps to shorten the liquidity trap duration. The negative taste shock leads to a fall in the potential real interest rate and keeps $r^{pot}$ below the nominal interest rate for eight quarters. Fiscal policy partly offsets this drop and pushes the potential real interest rate upwards. Nevertheless, the spending increase of $1\%$ of total GDP is still not high enough to shorten the liquidity trap duration. Not until the fiscal response exceeds a certain threshold, the liquidity trap duration changes to seven quarters or even lower. The $2\%$ spending hike yet reduces the duration of the liquidity trap and the central bank can raise the nominal interest rate after seven quarters.
-Figure \ref{Figure1a} gives a first important insight into the analysis of the marginal and average government spending multiplier we undertake in the following sections.
+We turn the focus now on the fiscal response to the negative taste shock. Figure \ref{Figure1a} shows how the rise in government spending helps to shorten the liquidity trap duration. The negative taste shock leads to a fall in the potential real interest rate and keeps $r^{pot}$ below the nominal interest rate for eight quarters. Fiscal policy partly offsets this drop and pushes the potential real interest rate upwards. Nevertheless, the spending increase of $1\%$ of total GDP is still not high enough to shorten the liquidity trap duration. Not till the fiscal response exceeds a certain threshold, the liquidity trap duration changes to seven quarters or even lower. The $2\%$ spending hike yet reduces the duration of the liquidity trap and the central bank can raise the nominal interest rate after seven quarters.
+Figure \ref{Figure1a} gives a first important insight into the analysis of the marginal and average government spending multiplier, we undertake in the following sections.
 
 \begin{figure}[p]
 \includegraphics[width=\textwidth]{Paperpics/Figure25quarternewtaylorrule}

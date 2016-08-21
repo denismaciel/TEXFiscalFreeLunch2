@@ -4,7 +4,7 @@
 % - Calculate the size of the multiplier out of the liquidity trap?
 
 
-\section{Multiplier}
+\section{The Government Spending Multiplier}
 
 \subsection*{Definition of Government Spending Multiplier}
 
@@ -20,7 +20,7 @@ In the model, the multiplier has a stairway format. The multiplier is constant a
 
 \begin{figure}[th]
 \includegraphics[width=\textwidth]{Paperpics/Figure3gsmnoinflation}
-\caption{Average and Marginal Multiplier with no Inflation}
+\caption{Average and Marginal Spending Multiplier with No Inflation}
 \label{fig:averagemultiplier}
 \end{figure}
 
@@ -30,7 +30,7 @@ A large multiplier makes a strong case for government intervention. Figure \ref{
 
 \begin{figure}[th]
 \includegraphics[width=\textwidth]{Paperpics/Figure3gsmalternativeprice.eps}
-\caption{Multiplier under Alternative Contract Duration}
+\caption{Spending Multiplier under Alternative Contract Duration}
 \label{fig:mulalt}
 \end{figure}
 
@@ -69,13 +69,13 @@ We have seen that in the case where prices are more flexible, the multiplier can
 
 \begin{figure}[th]
 \includegraphics[width=\textwidth]{Paperpics/Figure3govdebtnoinflation.eps}
-\caption{Government Spending Variation (No Inflation Response)}
+\caption{Government Debt Response with No Inflation}
 \label{fig:debtnoinflation}
 \end{figure}
 
 \begin{figure}[th]
 \includegraphics[width=\textwidth]{Paperpics/Figure3govdebtalternativeprices.eps}
-\caption{Government Spending Variation}
+\caption{Government Debt Response under Alternative Contract Duration}
 \label{fig:debt}
 \end{figure}
 

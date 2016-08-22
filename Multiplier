@@ -16,7 +16,7 @@ where capital letters stands for variables in levels and lowercase letters for v
 
 \subsection*{The Multiplier in the Model}
 
-In the model, the multiplier has a stairway format. The multiplier is constant as long as the duration of the liquidity trap remains unchanged. This means that each extra euro spent by the government will have the same effect on output if the liquidity trap duration is not affected. Once the increase in government spending is big enough to shorten the duration of the liquidity trap by one period, the multiplier declines. Government spending becomes then less effective in boosting the economy. 
+In the model, the multiplier has a stairway format. The multiplier is constant as long as the duration of the liquidity trap remains unchanged. This means that each extra euro spent by the government will have the same effect on output if the liquidity trap duration is not affected. Once the increase in government spending is big enough to shorten the duration of the liquidity trap by one period, the multiplier declines. Government spending becomes then less effective in boosting the economy.
 
 \begin{figure}[th]
 \centering
@@ -76,7 +76,7 @@ We have seen that in the case where prices are more flexible, the multiplier can
 \label{fig:debtnoinflation}
 \end{figure}
 
-This question is best answered by analyzing Figure~\ref{fig:debt}. It depicts the marginal effect that government spending has on government debt. The striking conclusion of the model is that for four-quarter contracts, a spending hike of one percent of GDP causes the debt to fall by roughly 0.7 percentage points. In this very scenario, even increases in spending in amounts greater than 7\% of GDP would not only be self-financing but it would in fact decrease government debt. The fiscal free lunch is also observed for five-quarter contracts although not as pronounced as in the previous case. For more sticky prices (average contract duration of ten quarters), there is no fall in debt but still in this case the government stimulus comes at moderate budgetary costs. The rate at which debt increases with government spending is not so high.
+This question is best answered by analyzing Figure~\ref{fig:debt}. It depicts the marginal effect that government spending has on government debt. The striking conclusion of the model is that for four-quarter contracts, a spending hike of one percent of GDP causes the debt to fall by roughly 0.7 percentage points. In this very scenario, even increases in spending in amounts greater than 7\% of GDP would not only be self-financing but it would in fact decrease government debt. The fiscal free lunch is also observed for five-quarter contracts although not as pronounced as in the previous case. For more sticky prices (average contract duration of ten quarters and with no inflation in Figure~\ref{fig:debtnoinflation}), there is no fall in debt but still in this case the government stimulus comes at moderate budgetary costs. The rate at which debt increases with government spending is not so high.
 
 \begin{figure}[!th]
 \centering

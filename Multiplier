@@ -56,7 +56,7 @@ We then calculated the marginal multiplier as following. For each $ i \in \{2,\c
 \begin{equation}
   m_i = \frac{1}{g_y} \frac{(y_i - y_{i-1})}{(g_i - g_{i-1})} \nonumber \vspace{0.3cm}
 \end{equation}
-This ensured that the marginal interpretation of the multiplier is still valid, since the difference between $ g_i $ and $ g_{i-1}$ is very small. Also because of this small difference, we succeeded in plotting the multiplier schedule with the format of a stairway. Given that the distance between every two points in the graph is so small, the line linking values of multiplier values in two different liquidity trap appear to be perfectly vertical, even though strictly speaking it is not.
+This ensured that the marginal interpretation of the multiplier is still valid, since the difference between $ g_i $ and $ g_{i-1}$ is very small. Also because of this small difference, we succeeded in plotting the multiplier schedule with the format of a stairway. Given that the distance between every two points in the graph is so small, the line linking values of multiplier values in two different liquidity traps appear to be perfectly vertical, even though strictly speaking it is not.
 
 For the average multiplier we proceeded similarly. We found the government shock that roughly corresponds to the case in which there is no change in government spending or, other words, the shock closest to zero. This shock turned out to be the 275th iteration of the loop. From that point we computed for each $ i \in \{276,\cdots, 551\} $:
 \begin{equation}
